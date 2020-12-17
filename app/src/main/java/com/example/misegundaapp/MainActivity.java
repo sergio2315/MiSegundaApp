@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 private String TAG = MainActivity.class.getSimpleName();
@@ -16,6 +17,11 @@ private String TAG = MainActivity.class.getSimpleName();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate");
+
+        EditText editTextname = findViewById(R.id.name);
+        EditText editTextlastname = findViewById(R.id.lastname);
+        editTextname.setText("pato");
+        editTextlastname.setText("donald");
 
         Button button1 = findViewById(R.id.continuar1);
         button1.setOnClickListener(new View.OnClickListener() {
